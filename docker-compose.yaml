@@ -1,0 +1,15 @@
+# docker-compose.yml
+
+version: "3"
+
+services:
+  external:
+    container_name: api-container
+    image: api-python
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 8080:8080 
+    env_file: ".env"

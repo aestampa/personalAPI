@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS LANGUAGE_PROJECT (
+    project_id INT NOT NULL,
+    language_id INT NOT NULL,
+    PRIMARY KEY (project_id, language_id),
+    FOREIGN KEY (project_id) REFERENCES PROJECT (id) ON DELETE CASCADE,
+    FOREIGN KEY (language_id) REFERENCES LANGUAGE (id) ON DELETE CASCADE
+)

@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS PROJECT (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    description VARCHAR(255) NOT NULL,
+    github_repo_url VARCHAR(255) NOT NULL
+)
